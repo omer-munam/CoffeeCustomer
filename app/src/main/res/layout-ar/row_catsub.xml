@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#0000"
+    android:padding="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <com.balram.library.FotTextView
+            android:padding="5dp"
+            android:clickable="false"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/name"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#9c3417"
+            app:customfont="Exo2-Regular.otf"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

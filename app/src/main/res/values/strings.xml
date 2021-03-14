@@ -1,0 +1,192 @@
+<resources>
+    <string name="app_name">Coffee Customer</string>
+
+    <string name="loc_needed">Enable Location to use the app.</string>
+    <string name="error">Error loading the application</string>
+
+
+    <string name="search">Search...</string>
+
+    <string name="gps_network_not_enabled">Enable GPS location for the application to work</string>
+    <string name="open">Open</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="menu_fav">Favorites</string>
+    <string name="menu_offer">Offers</string>
+    <string name="menu_products">Items</string>
+    <string name="menu_orders">Orders</string>
+    <string name="menu_stores">Restaurants</string>
+
+
+    <string name="view_product">View Product</string>
+    <string name="next_delivery">Next Delivery :</string>
+    <string name="view_cart">View Cart</string>
+    <string name="select_custom_date">Select custom Date</string>
+
+
+    <string name="copyright">Copyright</string>
+    <string name="signin">SIGN IN</string>
+    <string name="signup">SIGN UP</string>
+
+    <string name="userid">User ID</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirmpwd">Confirm password</string>
+    <string name="password_new">New Password</string>
+    <string name="confirmpwd_new">Confirm new password</string>
+    <string name="mobile">Contact</string>
+
+    <string name="not_enuf_time">Not enough duration available</string>
+
+    <string name="id_cannot_be_blank">Email cannot be blank</string>
+    <string name="email_username">Email Address</string>
+    <string name="or_connect">or connect</string>
+
+    <string name="difficulty_signin">Cannot access your acccount?</string>
+
+
+    <string name="invalid_email">Email address is not valid</string>
+    <string name="invalid_pwd">Password is not valied</string>
+    <string name="invalid_cpwd">Password and Confirm password</string>
+    <string name="invalid_mobile">Invalid phone number</string>
+    <string name="invalid_username">Username is not valid</string>
+    <string name="error_registration">Error in registration</string>
+    <string name="error_login">Error in login</string>
+    <string name="please_wait_before_registration">Please wait for sometimes</string>
+    <string name="enter_pwd">Please enter your email id</string>
+    <string name="username">Full Name</string>
+    <string name="invalid_name">Name cannot be blank</string>
+
+    <string name="account">Account</string>
+    <string name="error_network">Error in processing</string>
+    <string name="done">Done</string>
+
+    <string-array name="menuitems">
+        <item>Logout</item>
+        <item>Language</item>
+    </string-array>
+
+    <string name="select_address">Select your address</string>
+
+    <string name="place_picker_search_label">Search</string>
+    <string name="place_picker_search_hint">Search place...</string>
+    <string name="title_activity_recent_searches">Recent Searches</string>
+    <string name="more_recent_history_text">MORE FROM RECENT HISTORY</string>
+
+    <string name="menu_language">Language</string>
+    <string name="menu_about">About Us</string>
+    <string name="menu_share">Share </string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_account">Account</string>
+
+    <string name="are_you_sure">Are you sure ?</string>
+    <string name="logout_from_app">Logout from the application ?</string>
+    <string name="place_order_with_dl_del">Place this order ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="change_location">Change Delivery Location</string>
+
+    <string name="error_placing_order">Error placing order</string>
+    <string name="check_your_internet">Check your internet</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="error_loading_prev_locations">Error loading previous locations</string>
+    <string name="select_new_location">Select new location</string>
+    <string name="my_orders">My Orders</string>
+    <string name="remind">Remind</string>
+
+    <string name="pending">Pending</string>
+    <string name="delivered">Delivered</string>
+
+
+    <string name="change_del_time">Change Delivery Time</string>
+
+
+    <string name="order_ordered_date">Ordered On</string>
+    <string name="order_qty">Items Ordered</string>
+    <string name="order_delivery_date">Delivery time</string>
+    <string name="order_placed">Order placed</string>
+    <string name="order_accepted">Order accepted</string>
+    <string name="order_ready">Order ready</string>
+    <string name="order_delivered">Order dispatched</string>
+    <string name="order_closed">Order finished</string>
+    <string name="order_cancelled">Order cancelled</string>
+    <string name="delivery_location">Delivery Location</string>
+
+    <string name="select_delivery_time">Select delivery time</string>
+    <string name="provide_speicific_details">Delivery Address</string>
+
+    <string name="available">Available</string>
+    <string name="not_available">Offline</string>
+    <string name="currency">SAR</string>
+    <string name="cancel_order">Cancel order with this store ?</string>
+    <string name="call_is_required_to_contact">Call can be required when you wish to call for order status</string>
+
+
+    <string name="menu_help">Help</string>
+
+    <string name="error_updating_profile">Error updating profile</string>
+    <string name="name_blank">Name cannot be blank</string>
+    <string name="email_blank">Email cannot be blank</string>
+    <string name="email_invalid">Email is invalid</string>
+    <string name="password_min_char">Password should be minimum 6 characters</string>
+    <string name="password_mismatch">Password and confirm password does not match</string>
+    <string name="name">Name</string>
+    <string name="confirmpassword">Confirm password</string>
+    <string name="phone">Phone Number (Optional)</string>
+    <string name="oldPassword">Current Password</string>
+    <string name="old_password_cannot_b_blank">Current password cannot be blank</string>
+    <string name="error_in_data">Error retrieving data for the MANO :(</string>
+    <string name="error_response">Unexpected response received</string>
+    <string name="updated_success">Profile updated successfully</string>
+    <string name="menu_profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="upload_pic">Upload Pic</string>
+    <string name="pick_image_intent_text">Choose Profile Pic</string>
+    <string name="gross_total">Gross Total</string>
+    <string name="deliverycost">Delivery Cost</string>
+    <string name="net_total">Net Total</string>
+
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">Save</string>
+    <string name="menu_home">Home</string>
+    <string name="annoucement">Sales</string>
+    <string name="order">Order</string>
+    <string name="remove_product">Remove this item ?</string>
+
+    <string name="already_have_account">Already have an account ?</string>
+    <string name="create_new_acccount">Create new account ?</string>
+    <string name="address_details">Address details</string>
+    <string name="latest_location_not_available">Please wait while the your latest location is spotted...</string>
+
+    <string name="address_is_not_valid">Please provide your address which will be used as default delivery location</string>
+    <string name="free">Free</string>
+
+    <string name="min_order_msg">Your order should be minimum [MONEY] to place the order</string>
+    <string name="no_nearby">No nearby store</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+
+    <string name="order_loc">Address</string>
+    <string name="order_loc_specific">Location</string>
+    <string name="select_delivery_time_text">SELECT DELIVERY TIME</string>
+    <string name="save_setting">SAVE SETTING</string>
+    <string name="no_time_selected">No time is available yet!!!</string>
+    <string name="no_date_selected">No date availble yet!!!</string>
+    <string name="please_select_date_time">Please select delivery/date/time to proceed!!!</string>
+    <string name="select_date">Select Date :</string>
+    <string name="select_time">Select Time :</string>
+    <string name="products">Products</string>
+    <string name="delivery">Delivery</string>
+    <string name="your_address">Your Address</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="delivery_time">Delivery Time</string>
+    <string name="stores">Stores</string>
+    <string name="type_of_order">Type of Order:</string>
+    <string name="no_options_available">No Options Available!!</string>
+    <string name="please_provide_us_with_your_valuable_feedback">Please provide us with your valuable feedback</string>
+    <string name="review">Review</string>
+    <string name="submit">Submit</string>
+    <string name="coupon_value">Coupon Value</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

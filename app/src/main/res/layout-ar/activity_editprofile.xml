@@ -1,0 +1,502 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:background="#f7f7f7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/topview"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/header"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:id="@+id/menu_opener"
+                android:onClick="toggleMenu"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/list_menu"/>
+
+            <com.balram.library.FotTextView
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="@string/edit_profile"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/menu_mar"
+                android:textCursorDrawable="@null"
+                android:textColor="#fff"
+                app:customfont="Exo2-Regular.otf"
+                android:textSize="20dp"/>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/topview"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/fname_lr"
+                android:layoutDirection="rtl"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/profile_lr_padding"
+                android:paddingRight="@dimen/profile_lr_padding_rt"
+                android:background="@drawable/profile_rounded_etx"
+                android:layout_marginLeft="@dimen/profile_l_r"
+                android:layout_marginRight="@dimen/profile_l_r"
+                android:layout_height="@dimen/profile_widget">
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:src="@drawable/profile_name_"
+                    android:padding="@dimen/profile_icons"
+                    android:alpha="1.0"
+                    android:layout_width="@dimen/profile_hint_img"
+                    android:layout_height="@dimen/profile_hint_img" />
+
+                <com.balram.library.FotEditText
+                    android:background="@drawable/profile_bottom_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/username"
+                    android:id="@+id/name"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="@dimen/profile_etx_gap"
+                    android:textColorHint="@color/profile_hint"
+                    android:textColor="@color/profile_txt_edit"
+                    app:customfont="Exo2-Regular.otf"
+                    android:layout_marginRight="10dp"
+                    android:textSize="@dimen/profile_txt"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/email_lr"
+                android:layoutDirection="rtl"
+                android:paddingLeft="@dimen/profile_lr_padding"
+                android:paddingRight="@dimen/profile_lr_padding_rt"
+                android:background="@drawable/profile_rounded_etx"
+                android:layout_marginLeft="@dimen/profile_l_r"
+                android:layout_marginRight="@dimen/profile_l_r"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/profile_lr_mar"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_widget">
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:src="@drawable/profile_envelope"
+                    android:padding="@dimen/profile_icons"
+                    android:alpha="1.0"
+                    android:layout_width="@dimen/profile_hint_img"
+                    android:layout_height="@dimen/profile_hint_img" />
+
+
+                <RelativeLayout
+                    android:background="@drawable/profile_bottom_border"
+                    android:paddingBottom="@dimen/profile_etx_gap"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:background="@drawable/profile_bottom_border"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:animateLayoutChanges="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.balram.library.FotEditText
+                            android:background="#0000"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/profile_etx_gapped_escaped"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/email"
+                            android:id="@+id/email"
+                            android:singleLine="true"
+                            android:enabled="false"
+                            android:inputType="textEmailAddress"
+                            android:textCursorDrawable="@null"
+                            android:imeOptions="actionNext"
+                            android:textColorHint="@color/profile_hint"
+                            android:textColor="@color/profile_txt_edit"
+                            app:customfont="Exo2-Regular.otf"
+                            android:textSize="@dimen/profile_txt"/>
+
+                        <com.balram.library.FotTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/profile_etx_gaped"
+                            android:visibility="gone"
+                            android:padding="1dp"
+                            android:gravity="right|center_vertical"
+                            android:id="@+id/email_error"
+                            android:textColor="#fff"
+                            app:customfont="Exo2-Thin.otf"
+                            android:textSize="@dimen/profile_txt_err"/>
+
+                    </LinearLayout>
+
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/profile_icons_2"
+                        android:alpha="0.9"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/transparent"
+                        android:layout_width="@dimen/profile_hint_img"
+                        android:layout_height="@dimen/profile_hint_img" />
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layoutDirection="rtl"
+                android:paddingLeft="@dimen/profile_lr_padding"
+                android:paddingRight="@dimen/profile_lr_padding_rt"
+                android:id="@+id/password_lr"
+                android:background="@drawable/profile_rounded_etx"
+                android:layout_marginLeft="@dimen/profile_l_r"
+                android:layout_marginRight="@dimen/profile_l_r"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/profile_lr_mar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_widget">
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:src="@drawable/profile_loc"
+                    android:padding="@dimen/profile_icons"
+                    android:alpha="0.9"
+                    android:layout_width="@dimen/profile_hint_img"
+                    android:layout_height="@dimen/profile_hint_img" />
+
+
+
+
+                <RelativeLayout
+                    android:background="@drawable/profile_bottom_border"
+                    android:paddingBottom="@dimen/profile_etx_gap"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.balram.library.FotEditText
+                        android:background="#0000"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/oldPassword"
+                        android:id="@+id/oldpasword"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@null"
+                        android:imeOptions="actionNext"
+                        android:textColorHint="@color/profile_hint"
+                        android:textColor="@color/profile_txt_edit"
+                        app:customfont="Exo2-Regular.otf"
+                        android:textSize="@dimen/profile_txt"/>
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/profile_icons_2"
+                        android:alpha="0.9"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/transparent"
+                        android:layout_width="@dimen/profile_hint_img"
+                        android:layout_height="@dimen/profile_hint_img" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layoutDirection="rtl"
+                android:paddingLeft="@dimen/profile_lr_padding"
+                android:paddingRight="@dimen/profile_lr_padding_rt"
+                android:background="@drawable/profile_rounded_etx"
+                android:layout_marginLeft="@dimen/profile_l_r"
+                android:layout_marginRight="@dimen/profile_l_r"
+                android:id="@+id/confirmpwd_lr"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/profile_lr_mar"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_widget">
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:src="@drawable/profile_loc"
+                    android:padding="@dimen/profile_icons"
+                    android:alpha="0.9"
+                    android:layout_width="@dimen/profile_hint_img"
+                    android:layout_height="@dimen/profile_hint_img" />
+
+                <com.balram.library.FotEditText
+                    android:background="@drawable/profile_bottom_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/password_new"
+                    android:id="@+id/password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="@dimen/profile_etx_gap"
+                    android:textColorHint="@color/profile_hint"
+                    android:textColor="@color/profile_txt_edit"
+                    app:customfont="Exo2-Regular.otf"
+                    android:layout_marginRight="10dp"
+                    android:textSize="@dimen/profile_txt"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layoutDirection="rtl"
+                android:id="@+id/userid_lr"
+                android:paddingLeft="@dimen/profile_lr_padding"
+                android:paddingRight="@dimen/profile_lr_padding_rt"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/profile_lr_mar"
+                android:orientation="horizontal"
+                android:background="@drawable/profile_rounded_etx"
+                android:layout_marginLeft="@dimen/profile_l_r"
+                android:layout_marginRight="@dimen/profile_l_r"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_widget">
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:src="@drawable/location_lace"
+                    android:padding="@dimen/profile_icons"
+                    android:alpha="1.0"
+                    android:tint="#aaa"
+                    android:layout_width="@dimen/profile_hint_img"
+                    android:layout_height="@dimen/profile_hint_img" />
+
+                <com.balram.library.FotEditText
+                    android:background="@drawable/profile_bottom_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/address_details"
+                    android:id="@+id/uname"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="@dimen/profile_etx_gap"
+                    android:textColorHint="@color/profile_hint"
+                    android:textColor="@color/profile_txt_edit"
+                    app:customfont="Exo2-Regular.otf"
+                    android:layout_marginRight="10dp"
+                    android:textSize="@dimen/profile_txt"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layoutDirection="rtl"
+                android:id="@+id/location_details"
+                android:paddingLeft="@dimen/profile_lr_padding"
+                android:paddingRight="@dimen/profile_lr_padding_rt"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/profile_lr_mar"
+                android:orientation="horizontal"
+                android:background="@drawable/profile_rounded_etx"
+                android:layout_marginLeft="@dimen/profile_l_r"
+                android:layout_marginRight="@dimen/profile_l_r"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_widget">
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:src="@drawable/location_lace"
+                    android:padding="@dimen/profile_icons"
+                    android:alpha="1.0"
+                    android:tint="#aaa"
+                    android:layout_width="@dimen/profile_hint_img"
+                    android:layout_height="@dimen/profile_hint_img" />
+
+                <com.balram.library.FotTextView
+                    android:background="@drawable/profile_bottom_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/change_location"
+                    android:id="@+id/location_detailsetx"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:imeOptions="actionNext"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="@dimen/profile_etx_gap"
+                    android:textColorHint="@color/profile_hint"
+                    android:textColor="@color/profile_txt_edit"
+                    app:customfont="Exo2-Regular.otf"
+                    android:layout_marginRight="10dp"
+                    android:textSize="@dimen/profile_txt"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layoutDirection="rtl"
+                android:paddingLeft="@dimen/profile_lr_padding"
+                android:paddingRight="@dimen/profile_lr_padding_rt"
+                android:id="@+id/mobile_lr"
+                android:background="@drawable/profile_rounded_etx"
+                android:layout_marginLeft="@dimen/profile_l_r"
+                android:layout_marginRight="@dimen/profile_l_r"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/profile_lr_mar"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_widget">
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:src="@drawable/profile_phonenum_"
+                    android:padding="@dimen/profile_icons"
+                    android:alpha="1.0"
+                    android:layout_width="@dimen/profile_hint_img"
+                    android:layout_height="@dimen/profile_hint_img" />
+
+
+                <RelativeLayout
+                    android:background="@drawable/profile_bottom_border"
+                    android:paddingBottom="@dimen/profile_etx_gap"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.balram.library.FotEditText
+                        android:background="#0000"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/mobile"
+                        android:id="@+id/contact"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:maxLength="10"
+                        android:textCursorDrawable="@null"
+                        android:imeOptions="actionDone"
+                        android:textColorHint="@color/profile_hint"
+                        android:textColor="@color/profile_txt_edit"
+                        app:customfont="Exo2-Regular.otf"
+                        android:textSize="@dimen/profile_txt"/>
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/profile_icons_2"
+                        android:alpha="0.9"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/transparent"
+                        android:layout_width="@dimen/profile_hint_img"
+                        android:layout_height="@dimen/profile_hint_img" />
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <com.balram.library.FotButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_widget"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/profile_l_r"
+                android:layout_marginRight="@dimen/profile_l_r"
+                android:layout_marginTop="@dimen/profile_lr_mar"
+                android:layout_marginBottom="@dimen/profile_etx_gap"
+                android:textColor="#fff"
+                android:onClick="submitvalues"
+                android:background="@drawable/profile_button"
+                app:customfont="Exo2-Bold.otf"
+                android:textSize="@dimen/profile_txt"/>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/left_drawer"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:choiceMode="singleChoice"
+        android:background="@drawable/rounded_right">
+
+        <include layout="@layout/menu_layout"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

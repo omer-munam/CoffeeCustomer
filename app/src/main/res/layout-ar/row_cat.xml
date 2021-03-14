@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/img_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.widget.RoundedImg
+                android:id="@+id/img"
+                app:round_border_width="1dp"
+                app:round_border_color="#accc"
+                app:round_corner_radius="5000dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="6dp"
+                android:scaleType="centerCrop" />
+
+
+            <com.balram.library.FotTextView
+                android:padding="5dp"
+                android:clickable="false"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/name"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#9c3417"
+                app:customfont="Exo2-Bold.otf"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:tint="#fff"
+            android:visibility="gone"
+            android:id="@+id/fav_added"
+            android:layout_centerInParent="true"
+            android:src="@drawable/fav_added"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_height">60dp</dimen>
+    <dimen name="menu_img">25dp</dimen>
+    <dimen name="menu_txt">13dp</dimen>
+    <dimen name="menu_mar">5dp</dimen>
+
+    <dimen name="profile_txt">14dp</dimen>
+    <dimen name="profile_etx_gap">10dp</dimen>
+    <dimen name="profile_etx_gaped">15dp</dimen>
+    <dimen name="profile_etx_gapped_escaped">20dp</dimen>
+    <dimen name="profile_txt_err">10dp</dimen>
+    <dimen name="profile_lr_padding">30dp</dimen>
+    <dimen name="profile_lr_padding_rt">0dp</dimen>
+    <dimen name="profile_padding">4dp</dimen>
+    <dimen name="profile_lr_mar">10dp</dimen>
+    <dimen name="profile_widget">55dp</dimen>
+    <dimen name="profile_hint_img">28dp</dimen>
+
+    <dimen name="title_size">18dp</dimen>
+    <dimen name="title_margin">15dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="place_picker_suggest_list_row_name">16sp</dimen>
+    <dimen name="place_picker_suggest_list_row_description">15sp</dimen>
+    <dimen name="place_picker_list_row_icon_width">70dp</dimen>
+
+    <dimen name="profile_l_r">20dp</dimen>
+    <dimen name="profile_icons">5dp</dimen>
+    <dimen name="profile_icons_2">7dp</dimen>
+</resources>

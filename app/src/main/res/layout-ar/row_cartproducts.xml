@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="0dp"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+        android:background="#0000"
+        android:paddingLeft="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/garbage"
+                android:layout_alignTop="@+id/img"
+                android:tint="#555"
+                android:padding="5dp"
+                android:id="@+id/garbage"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:layout_marginTop="10dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/img"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                app:civ_border_width="1dp"
+                app:civ_shadow="true"
+                app:civ_border="true"
+                app:civ_border_color="#eee"
+                app:civ_shadow_color="#ccc"
+                app:civ_shadow_radius="1"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/garbage"
+                android:layout_alignTop="@+id/name"
+                android:layout_centerVertical="true" />
+
+            <com.balram.library.FotTextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/img"
+                android:layout_alignParentLeft="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#222"
+                app:customfont="Exo2-Bold.otf"
+                android:textSize="14dp"/>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/nameloclr"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layoutDirection="rtl"
+                android:layout_toRightOf="@+id/qtylr"
+                android:layout_marginTop="6dp"
+                android:layout_below="@+id/name">
+                <com.balram.library.FotTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameloc"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:textColor="@color/txt"
+                    app:customfont="Exo2-Regular.otf"
+                    android:textSize="12dp"/>
+
+                <com.balram.library.FotTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/discounted"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:textColor="@color/txt"
+                    app:customfont="Exo2-Regular.otf"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <com.balram.library.FotTextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/distance"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/qtylr"
+                android:layout_below="@+id/nameloclr"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/txt"
+                app:customfont="Exo2-Thin.otf"
+                android:textSize="14dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:id="@+id/qtylr"
+                android:gravity="center"
+                android:layout_height="50dp"
+                android:layoutDirection="rtl"
+                android:layout_below="@+id/name"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:adjustViewBounds="true"
+                    android:tint="#555"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/arrow_down"
+                    android:id="@+id/decrease"/>
+
+
+                <com.balram.library.FotEditText
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/qty"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:enabled="false"
+                    android:cursorVisible="false"
+                    android:textCursorDrawable="@null"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/rounded_qty"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="@color/txt"
+                    app:customfont="Exo2-Thin.otf"
+                    android:textSize="12dp"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:adjustViewBounds="true"
+                    android:tint="#555"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/arrow_up"
+                    android:id="@+id/increase"/>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee"/>
+   </LinearLayout>
+</RelativeLayout>

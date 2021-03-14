@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginBottom="3dp"
+    android:fadingEdgeLength="4dp"
+    android:paddingStart="6dp"
+    android:paddingTop="4dp"
+    android:paddingEnd="6dp"
+    android:paddingBottom="4dp"
+    app:cardBackgroundColor="@color/orange_sel"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
+
+        <com.github.ornolfr.ratingview.RatingView
+            android:id="@+id/ratingReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:foregroundTint="@color/txtwhite"
+            app:drawable_empty="@drawable/rating_blank"
+            app:drawable_filled="@drawable/rating_full"
+            app:drawable_half="@drawable/rating_half"
+            app:drawable_margin="2dp"
+            app:drawable_size="20dp" />
+
+        <com.balram.library.FotTextView
+            android:id="@+id/ratingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingReviews"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/name"
+            android:textColor="@color/txtwhite"
+            app:customfont="Exo2-Bold.otf" />
+
+        <com.balram.library.FotTextView
+            android:id="@+id/ratingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/select_custom_date"
+            android:textColor="@color/txtwhite"
+            app:customfont="Exo2-Thin.otf" />
+
+        <com.balram.library.FotTextView
+            android:id="@+id/ratingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:inputType="textLongMessage|textMultiLine"
+            android:singleLine="false"
+            android:text="Review Text"
+            android:textColor="@color/txtwhite"
+            app:customfont="Exo2-Regular.otf" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#0000"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_width="120dp"
+    android:id="@+id/parent"
+    android:layout_height="match_parent">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/img"
+        app:civ_border="true"
+        app:civ_border_color="#ccc"
+        app:civ_border_width="1dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#eee"
+        app:civ_shadow_radius="2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.balram.library.FotTextView
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/name"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/txt"
+        app:customfont="Exo2-Thin.otf"
+        android:textSize="14dp"/>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@drawable/product_bg"
+        android:clickable="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/imglr"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.widget.RoundedImg
+                android:id="@+id/img"
+                android:clickable="false"
+                android:scaleType="centerInside"
+                app:round_corner_radius="5dp"
+                android:layout_margin="3dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <ImageView
+                android:id="@+id/favimg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/img"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="-1dp"
+                android:layout_marginEnd="1dp"
+                android:clickable="false"
+                android:padding="10dp"
+                android:src="@drawable/fav_not_added_yet"
+                android:tint="#000"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <com.balram.library.FotTextView
+            android:id="@+id/NameProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/red" />
+
+        <com.balram.library.FotTextView
+            android:clickable="false"
+            android:layout_below="@+id/img"
+            android:layout_marginBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:id="@+id/name"
+            android:singleLine="false"
+            android:ellipsize="end"
+            android:textColor="#8b3e1f"
+            app:customfont="Exo2-Thin.otf"
+            android:textSize="11dp"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:layout_below="@+id/name"
+            android:orientation="horizontal"
+            android:layout_marginBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.balram.library.FotTextView
+                android:clickable="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/discounted"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="ddd"
+                android:textColor="@color/green"
+                app:customfont="Exo2-Bold.otf"
+                android:textSize="10dp"/>
+
+            <com.balram.library.FotTextView
+                android:clickable="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/price"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="eee"
+                android:textColor="@color/green"
+                app:customfont="Exo2-Bold.otf"
+                android:textSize="10dp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            android:background="#0000"
+            android:id="@+id/addProductlr"
+            android:layout_below="@+id/price"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_weight="0.3"
+                android:tint="#535353"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_down"
+                android:id="@+id/decrease"/>
+
+
+            <com.balram.library.FotEditText
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.4"
+                android:id="@+id/qty"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="center"
+                android:enabled="false"
+                android:background="@drawable/rounded_qty"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/txt"
+                app:customfont="Exo2-Thin.otf"
+                android:textSize="12dp"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:adjustViewBounds="true"
+                android:tint="#535353"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_up"
+                android:id="@+id/increase"/>
+
+
+
+        </LinearLayout>
+
+</LinearLayout>
+</RelativeLayout>

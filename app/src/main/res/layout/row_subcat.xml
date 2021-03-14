@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+<LinearLayout
+    android:background="#0000"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="55dp">
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subcatname"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Subcategory"
+        android:textColor="@color/header"
+        app:customfont="Exo2-Bold.otf"
+        android:textSize="14dp"/>
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cat"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Category"
+        android:textColor="#555"
+        app:customfont="Exo2-Thin.otf"
+        android:textSize="14dp"/>
+
+</LinearLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+
+<resources>
+
+<string name="app_name">تمويناني</string>
+
+<string name="loc_needed">تشغيل نظام تحديد المواقع</string>
+
+<string name="error">خطأ في تحميل التطبيق</string>
+
+<string name="search">البحث</string>
+
+<string name="gps_network_not_enabled">التطبيق يتطلب تشغيل نظام تحديد المواقع</string>
+
+<string name="open">افتح</string>
+
+<string name="cancel">إلغاء</string>
+
+<string name="menu_fav">المفضلة</string>
+
+<string name="menu_offer">العروض</string>
+
+<string name="menu_products">المنتجات</string>
+
+<string name="menu_orders">تتبع الطلب</string>
+
+<string name="menu_stores">المتاجر</string>
+
+<string name="menu_help">مساعدة</string>
+
+<string name="view_product">مشاهدة المنتج</string>
+
+<string name="next_delivery">التوصيل القادم</string>
+
+<string name="view_cart">مشاهدة السلة</string>
+
+<string name="select_custom_date">الرجاء اختيار التاريخ</string>
+
+<string name="copyright">حقوق النسخ</string>
+
+<string name="signin">تسجيل الدخول</string>
+
+<string name="signup">التسجيل</string>
+
+<string name="userid">اسم المستخدم</string>
+
+<string name="email">البريد الالكتروني</string>
+
+<string name="password">كلمة المرور</string>
+
+<string name="confirmpwd">تأكيد كلمة المرور</string>
+
+<string name="password_new">كلمة المرور الجديدة</string>
+
+<string name="confirmpwd_new">تأكيد كلمة المرور الجديدة</string>
+
+<string name="mobile">رقم الاتصال </string>
+
+<string name="not_enuf_time">الوقت غير كافي</string>
+
+<string name="id_cannot_be_blank">يجب تعبئة البريد الالكتروني</string>
+
+<string name="email_username">البريد الالكتروني </string>
+
+<string name="or_connect">أو الاتصال</string>
+
+<string name="difficulty_signin">لم تستطع الدخول إلى حسابك؟</string>
+
+<string name="invalid_email">البريد الالكتروني غير صحيح</string>
+
+<string name="invalid_pwd">خطأ في كلمة المرور</string>
+
+<string name="invalid_cpwd">كلمة المرور وتأكيد كلمة المرور</string>
+
+<string name="invalid_mobile">رقم الجوال غير صحيح</string>
+
+<string name="invalid_username">اسم المستخدم غير صحيح</string>
+
+<string name="error_registration">خطأ في عملية التسجيل</string>
+
+<string name="error_login">خطأ في عملية الدخول</string>
+
+<string name="please_wait_before_registration">الرجاء الانتظار</string>
+
+<string name="enter_pwd">الرجاء ادخال البريد الالكتروني</string>
+
+<string name="username">الاسم كامل</string>
+
+<string name="invalid_name">يجب ادخال الاسم</string>
+
+<string name="account">الحساب</string>
+
+<string name="error_network">حدث خطأ في المعالجة</string>
+
+<string name="done">انتهى</string>
+
+
+-<string-array name="menuitems">
+
+<item>الخروج</item>
+
+<item>اللغة</item>
+
+</string-array>
+
+<string name="select_address">اختر العنوان</string>
+
+<string name="place_picker_search_label">ابحث</string>
+
+<string name="place_picker_search_hint">ابحث عن المكان</string>
+
+<string name="title_activity_recent_searches">نتائج البحث السابقة</string>
+
+<string name="more_recent_history_text">MORE FROM RECENT HISTORY</string>
+
+<string name="menu_language">اللغة</string>
+
+<string name="menu_about">حول التطبيق</string>
+
+<string name="menu_share">مشاركة </string>
+
+<string name="menu_logout">تسجيل الخروج</string>
+
+<string name="menu_account">الحساب</string>
+
+<string name="are_you_sure">هل أنت متأكد؟</string>
+
+<string name="logout_from_app">تسجيل الخروج من التطبيق؟</string>
+
+<string name="yes">نعم</string>
+
+<string name="no">لا</string>
+
+<string name="change_location">تغيير مكان التوصيل</string>
+
+<string name="error_placing_order">خطأ في عملية الطلب</string>
+
+<string name="check_your_internet">تأكد من الاتصال بالانترنت</string>
+
+<string name="unknown_error">خطأ غير معروف</string>
+
+<string name="error_loading_prev_locations">خطأ في تحميل المواقع السابقة</string>
+
+<string name="select_new_location"> اختيار موقع جديد</string>
+
+<string name="my_orders">طلباتي</string>
+
+<string name="remind">تذكير</string>
+
+<string name="pending">معلق</string>
+
+<string name="delivered">تم تسليمه</string>
+
+<string name="change_del_time">تغيير وقت التوصيل</string>
+
+<string name="order_ordered_date">تاريخ الطلب</string>
+
+<string name="order_qty">الاصناف المطلوبة</string>
+
+<string name="order_delivery_date">وقت التوصيل</string>
+
+<string name="order_placed">تم الطلب</string>
+
+<string name="order_accepted">تم قبول الطلب </string>
+
+<string name="order_ready">تم التجهيز</string>
+
+<string name="order_delivered">تم الارسال</string>
+
+<string name="order_closed">تم التوصيل</string>
+
+<string name="order_cancelled"> تم الغاء الطلب</string>
+
+<string name="delivery_location">موقع التوصيل</string>
+
+<string name="select_delivery_time">الرجاء اختيار وقت التوصيل</string>
+
+<string name="provide_speicific_details">وصف عنوان توصيل</string>
+
+<string name="available">مفتوح</string>
+
+<string name="not_available">مغلق</string>
+
+<string name="currency">ريال</string>
+
+<string name="cancel_order">الغاء الطلب من هذا المتجر؟</string>
+
+<string name="call_is_required_to_contact">امكانية الاتصال لمعرفة حالة الطلبات</string>
+
+<string name="error_updating_profile">خطأ في تحديث الملف الشخصي</string>
+
+<string name="name_blank"> يجب تعبئة حقل الاسم</string>
+
+<string name="email_blank">يجب تعبئة حقل البريد الالكتروني</string>
+
+<string name="email_invalid">البربد الالكتروني غير صحيح</string>
+
+<string name="password_min_char">يجب ان تكون كلمة المرور 6 خانات</string>
+
+<string name="password_mismatch">كلمة المرور غير مطابقة</string>
+
+<string name="name">الاسم</string>
+
+<string name="confirmpassword">تأكيد كلمة المرور</string>
+
+<string name="phone">رقم الهاتف اختياري</string>
+
+<string name="oldPassword">كلمة المرور الحالية</string>
+
+<string name="old_password_cannot_b_blank">يجب ادخال كلمة المرور الحالية</string>
+
+<string name="error_in_data">خطأ في استعادة البيانات</string>
+
+<string name="error_response">اجابة غير متوقعة</string>
+
+<string name="updated_success"> تم تحديث الملف الشخصي بنجاح</string>
+
+<string name="menu_profile">الملف</string>
+
+<string name="logout">تسجيل الخروج</string>
+
+<string name="upload_pic">تحميل الصورة</string>
+
+<string name="pick_image_intent_text">اختر صورة للملف الشخصي</string>
+
+<string name="gross_total">السعر شامل الضريبة المضافة</string>
+
+<string name="deliverycost">قيمةالتوصيل</string>
+
+<string name="net_total">المجموع الكلي</string>
+
+<string name="edit_profile">تحرير الملف الشخصي</string>
+
+<string name="save">حفظ</string>
+
+<string name="menu_home">الصفحة الرئيسية</string>
+
+<string name="annoucement">التخفيضات</string>
+
+<string name="order">ارسال الطلب</string>
+
+<string name="remove_product">إزالة هذا الصنف</string>
+
+<string name="already_have_account"> لديك حساب مسبقا</string>
+
+<string name="create_new_acccount">إنشاء حساب جديد</string>
+
+<string name="address_details"> وصف للعنوان - الحي / اسم الشارع / رقم المبنى </string>
+
+<string name="latest_location_not_available">الرجاء الانتظار حتى يتم تحميل الموقع</string>
+
+<string name="address_is_not_valid">الرجاء ادخال العنوان الاقتراضي للتوصيل</string>
+
+<string name="free">مجاني</string>
+
+<string name="min_order_msg">قيمة الطلب لابد ان تكون اكثر من [MONEY]</string>
+
+<string name="no_nearby"> لا تتوفر متاجر قريبة انتظرونا قريبا</string>
+
+<string name="place_order_with_dl_del">عند وجود اي استفسار سوف يتم التواصل معكم ، هل تريد ارسال الطلب؟</string>
+
+<string name="invalid_phone_number">رقم الهاتف غير صحيح</string>
+
+<string name="order_loc"> تحديد موقع التوصيل</string>
+
+<string name="order_loc_specific">وصف العنوان,الحي , رقم المبنى .. </string>
+    <string name="type_of_order">Type of Order:</string>
+    <string name="no_options_available">No Options Available!!</string>
+
+</resources>

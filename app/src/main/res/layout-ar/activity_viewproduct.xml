@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+<RelativeLayout
+    android:background="#fcfcfc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/topview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/header">
+
+        <com.balram.library.FotTextView
+            android:background="#0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="@string/view_product"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/menu_mar"
+            android:textCursorDrawable="@null"
+            android:textColor="#fff"
+            app:customfont="Exo2-Regular.otf"
+            android:textSize="20dp"/>
+
+
+        <com.balram.library.FotTextView
+            android:background="@drawable/rounded_cart"
+            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0.00"
+            android:singleLine="true"
+            android:textColor="#fff"
+            app:customfont="Exo2-Thin.otf"
+            android:onClick="showCart"
+            android:clickable="true"
+            android:id="@+id/currentTotal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            android:textSize="13dp"/>
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:id="@+id/menu_opener"
+            android:onClick="toggleMenu"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/list_menu"/>
+
+    </RelativeLayout>
+
+
+
+    <ListView
+        android:layout_below="@+id/topview"
+        android:id="@+id/listview"
+        android:divider="#0000"
+        android:dividerHeight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/menu_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0000"/>
+    <include layout="@layout/cart_icon"/>
+
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/left_drawer"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:background="@drawable/rounded_right">
+
+        <include layout="@layout/menu_layout"/>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:background="#0000"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="125dp">
+
+    <com.widget.RoundedImg
+        android:id="@+id/img"
+        app:round_corner_radius="5dp"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Mall Name"
+        android:textColor="#222"
+        app:customfont="Exo2-Bold.otf"
+        android:textSize="14dp"/>
+
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/data"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="top"
+        android:text="Offer String"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/name"
+        android:layout_above="@+id/uploadedOn"
+        android:textColor="@color/txt"
+        app:customfont="Exo2-Regular.otf"
+        android:textSize="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadedOn"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Uploaded On"
+        android:drawableLeft="@drawable/order_deltime"
+        android:drawablePadding="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/next"
+        app:customfont="Exo2-Thin.otf"
+        android:textSize="12dp"/>
+
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>

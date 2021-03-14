@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:background="#fcfcfc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleX="1.10"
+            android:scaleY="1.10"
+            android:tint="#fff"
+            app:srcCompat="@drawable/profile_email" />
+
+        <LinearLayout
+            android:id="@+id/signinHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rltop"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <com.balram.library.FotTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/stores"
+                android:textColor="@color/signin_textcolor_color"
+                android:textCursorDrawable="@null"
+                android:textSize="20sp"
+                app:customfont="Exo2-Bold.otf" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rltop"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/header"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true">
+
+
+            <com.balram.library.FotTextView
+                android:background="#0000"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/action_title"
+                android:singleLine="true"
+                android:textColor="@color/title_color"
+                app:customfont="Exo2-Regular.otf"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/title_margin"
+                android:textSize="@dimen/title_size"/>
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_white"
+                android:layout_centerInParent="true"/>
+
+
+            <RelativeLayout
+                android:id="@+id/etx_home"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/searchVisible"
+                android:layout_toEndOf="@+id/menu_opener"
+                android:background="@drawable/etx_home"
+                android:padding="4dp"
+                android:visibility="gone">
+
+                <com.balram.library.FotEditText
+                    android:id="@+id/searchStoreText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/bar_sep"
+                    android:background="#0000"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/search"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@color/txt"
+                    android:textColorHint="@color/hint_txt"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp"
+                    app:customfont="Exo2-Regular.otf" />
+
+
+                <ImageView
+                    android:id="@+id/bar_sep"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toStartOf="@+id/barcode"
+                    android:src="@drawable/seprator_grey"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/barcode"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/barcode"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/searchVisible"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/action_title"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="searchStores"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:scaleX="1.25"
+                android:scaleY="1.25"
+                android:src="@android:drawable/ic_search_category_default"
+                android:tint="#fff"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/filterPopup"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/searchVisible"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:onClick="filterPopup"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:scaleX="1.25"
+                android:scaleY="1.25"
+                android:src="@drawable/filter"
+                android:tint="#fff"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/menu_opener"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:onClick="toggleMenu"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/list_menu" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/signinHeading"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
+
+
+            <ListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:divider="#0000"
+                android:dividerHeight="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:scrollbars="none" />
+
+
+            <LinearLayout
+                android:id="@+id/no_nearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/no_nearby" />
+
+                <com.balram.library.FotTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#0000"
+                    android:text="@string/no_nearby"
+                    android:textColor="#333"
+                    android:textSize="24dp"
+                    app:customfont="Exo2-Bold.otf" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/left_drawer"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:background="@drawable/rounded_right">
+
+        <include layout="@layout/menu_layout"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

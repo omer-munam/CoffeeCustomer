@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundishImageView">
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="roundedCorners">
+            <flag name="topLeft" value="1" />
+            <flag name="topRight" value="2" />
+            <flag name="bottomRight" value="4" />
+            <flag name="bottomLeft" value="8" />
+            <flag name="all" value="15" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="round_corner_radius" format="dimension" />
+        <attr name="round_border_width" format="dimension" />
+        <attr name="round_border_color" format="color" />
+        <attr name="round_round_background" format="boolean" />
+        <attr name="round_is_oval" format="boolean" />
+        <attr name="android:scaleType" />
+    </declare-styleable>
+
+    <declare-styleable name="Fot">
+        <attr name="customfont" format="string"/>
+    </declare-styleable>
+</resources>

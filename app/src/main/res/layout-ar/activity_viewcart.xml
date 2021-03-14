@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fefefe">
+
+        <RelativeLayout
+            android:id="@+id/topview"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/header">
+
+            <ImageView
+                android:id="@+id/menu_opener"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:onClick="toggleMenu"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/list_menu" />
+
+            <com.balram.library.FotTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/menu_mar"
+                android:background="#0000"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/view_cart"
+                android:textColor="#fff"
+                android:textCursorDrawable="@null"
+                android:textSize="20dp"
+                android:visibility="gone"
+                app:customfont="Exo2-Regular.otf" />
+
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_white" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/costing_arr"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/topview"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/signinHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltop"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <com.balram.library.FotTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/delivery"
+                    android:textColor="@color/signin_textcolor_color"
+                    android:textCursorDrawable="@null"
+                    android:textSize="20sp"
+                    app:customfont="Exo2-Bold.otf" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_grey"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <com.widget.RoundedImg
+                    android:id="@+id/img"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    app:round_corner_radius="5dp" />
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/storename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@+id/img"
+                    android:gravity="top|start"
+                    android:singleLine="false"
+                    android:text="0.00"
+                    android:textColor="#333"
+                    android:textSize="15dp"
+                    app:customfont="Exo2-Bold.otf" />
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/locationname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/storename"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@+id/img"
+                    android:background="@drawable/rounded_grey"
+                    android:gravity="top|start"
+                    android:singleLine="false"
+                    android:text="0.00"
+                    android:textColor="#555"
+                    android:textSize="13dp"
+                    app:customfont="Exo2-Regular.otf" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/loc_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/rounded_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/dark_grey_color"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Regular.otf"
+                    android:text="@string/your_address"/>
+
+
+                <!--<ImageView-->
+                <!--android:id="@+id/odlt3"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:clickable="false"-->
+                <!--android:src="@drawable/loc_five"-->
+                <!--android:textSize="14dp"-->
+                <!--android:tint="#aaa"-->
+                <!--android:visibility="gone"/>-->
+
+                <!--<com.balram.library.FotTextView-->
+                <!--android:id="@+id/lm_txt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:layout_toRightOf="@+id/odlt3"-->
+                <!--android:clickable="false"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:singleLine="true"-->
+                <!--android:text="@string/order_loc"-->
+                <!--android:textColor="@color/red"-->
+                <!--android:textSize="14dp"-->
+                <!--app:customfont="Exo2-Bold.otf"-->
+                <!--android:visibility="gone"/>-->
+
+                <!--<com.balram.library.FotTextView-->
+                <!--android:id="@+id/location"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_toLeftOf="@+id/abcd"-->
+                <!--android:layout_toRightOf="@+id/lm_txt"-->
+                <!--android:ellipsize="end"-->
+                <!--android:layoutDirection="rtl"-->
+                <!--android:maxLines="1"-->
+                <!--android:paddingLeft="3dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/green"-->
+                <!--android:textSize="14dp"-->
+                <!--app:customfont="Exo2-Bold.otf" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/abcd"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:clickable="false"-->
+                <!--android:src="@drawable/pencil"-->
+                <!--android:textSize="14dp"-->
+                <!--android:visibility="gone"/>-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loc_specific"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/rounded_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/locationspecific"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/dark_grey_color"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Regular.otf"
+
+                    android:text="@string/delivery_address"/>
+
+                <!--<ImageView-->
+                <!--android:id="@+id/odlt2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:clickable="false"-->
+                <!--android:src="@drawable/loc_five"-->
+                <!--android:textSize="14dp"-->
+                <!--android:tint="#aaa" />-->
+
+                <!--<com.balram.library.FotTextView-->
+                <!--android:id="@+id/ls_txt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:layout_toRightOf="@+id/odlt2"-->
+                <!--android:clickable="false"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:singleLine="true"-->
+                <!--android:text="@string/provide_speicific_details"-->
+                <!--android:textColor="@color/red"-->
+                <!--android:textSize="14dp"-->
+                <!--app:customfont="Exo2-Bold.otf" />-->
+
+                <!--<com.balram.library.FotTextView-->
+                <!--android:id="@+id/locationspecific"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_toRightOf="@+id/ls_txt"-->
+                <!--android:ellipsize="end"-->
+                <!--android:layoutDirection="rtl"-->
+                <!--android:maxLines="1"-->
+                <!--android:paddingLeft="3dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/green"-->
+                <!--android:textSize="14dp"-->
+                <!--app:customfont="Exo2-Bold.otf" />-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:clickable="false"-->
+                <!--android:src="@drawable/pencil"-->
+                <!--android:textSize="14dp" />-->
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/dellr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/rounded_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/deliverydate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/dark_grey_color"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Regular.otf"
+                    android:layout_toEndOf="@+id/d_txt"
+
+
+                    android:text="@string/delivery_time"/>
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/deliverytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/dark_grey_color"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Regular.otf"
+                    android:layout_toEndOf="@+id/deliverydate"/>
+
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/price_dl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/dark_grey_color"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Regular.otf"
+                    android:layout_toEndOf="@+id/deliverytime" />
+
+
+                <!--<ImageView-->
+                <!--android:id="@+id/odlt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:clickable="false"-->
+                <!--android:src="@drawable/order_deltime"-->
+                <!--android:textSize="14dp"-->
+                <!--android:tint="#aaa" />-->
+
+                <!--<com.balram.library.FotTextView-->
+                <!--android:id="@+id/d_txt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:layout_toRightOf="@+id/odlt"-->
+                <!--android:clickable="false"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:singleLine="true"-->
+                <!--android:text="@string/order_delivery_date"-->
+                <!--android:textColor="@color/red"-->
+                <!--android:textSize="14dp"-->
+                <!--app:customfont="Exo2-Bold.otf" />-->
+
+                <!--<com.balram.library.FotTextView-->
+                <!--android:id="@+id/deliverydate"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_toRightOf="@+id/d_txt"-->
+                <!--android:ellipsize="end"-->
+                <!--android:layoutDirection="rtl"-->
+                <!--android:maxLines="1"-->
+                <!--android:paddingLeft="3dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/green"-->
+                <!--android:textSize="14dp"-->
+                <!--app:customfont="Exo2-Bold.otf" />-->
+
+                <!--<com.balram.library.FotTextView-->
+                <!--android:id="@+id/deliverytime"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="1dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_toRightOf="@+id/deliverydate"-->
+                <!--android:drawablePadding="5dp"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:paddingLeft="3dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/orange"-->
+                <!--android:textSize="14dp"-->
+                <!--app:customfont="Exo2-Bold.otf" />-->
+
+
+                <!--<com.balram.library.FotTextView-->
+                <!--android:id="@+id/price_dl"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="1dp"-->
+                <!--android:layout_marginRight="1dp"-->
+                <!--android:layout_toLeftOf="@+id/pencil"-->
+                <!--android:drawablePadding="5dp"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/green"-->
+                <!--android:textSize="14dp"-->
+                <!--app:customfont="Exo2-Bold.otf" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/pencil"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:clickable="false"-->
+                <!--android:src="@drawable/pencil"-->
+                <!--android:textSize="14dp" />-->
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:divider="#0000"
+                android:dividerHeight="1dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/lrcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/costing_arr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_lr"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/grosslr"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@+id/delcostrl"
+                android:background="#eee"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp">
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#454545"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Bold.otf" />
+
+                <com.balram.library.FotTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:padding="2dp"
+                    android:singleLine="true"
+                    android:text="@string/gross_total"
+                    android:textColor="#454545"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Bold.otf" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/delcostrl"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@+id/totrl"
+                android:layout_marginTop="1dp"
+                android:background="#eee"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:layout_marginBottom="15dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp">
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/deliverycost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#454545"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Bold.otf" />
+
+                <com.balram.library.FotTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/deliverycost"
+                    android:textColor="#454545"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Bold.otf" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/totrl"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_above="@+id/total_sep2"
+                android:background="#eee"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:layout_marginBottom="15dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp">
+
+                <com.balram.library.FotTextView
+                    android:id="@+id/currentTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#454545"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Bold.otf" />
+
+                <com.balram.library.FotTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/net_total"
+                    android:textColor="#454545"
+                    android:textSize="16sp"
+                    app:customfont="Exo2-Bold.otf" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_lr"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="#eee"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.balram.library.FotButton
+                android:id="@+id/submitvalues"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:background="@color/green"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/order"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="13dp"
+                app:customfont="Exo2-Bold.otf" />
+
+            <com.balram.library.FotTextView
+                android:id="@+id/min_order_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#454545"
+                android:textSize="14sp"
+                app:customfont="Exo2-Regular.otf"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c666"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/lLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_white"
+                android:divider="#0000"
+                android:padding="10dp"
+                android:scrollbars="none" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/rounded_right"
+        android:choiceMode="singleChoice"
+        android:orientation="vertical">
+
+        <include layout="@layout/menu_layout" />
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

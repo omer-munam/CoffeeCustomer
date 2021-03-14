@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="#0000"
+        android:padding="5dp"
+        android:id="@+id/parentLr"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="115dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/img"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:scaleType="centerCrop"
+            app:civ_border_width="1dp"
+            app:civ_shadow="true"
+            app:civ_border="true"
+            app:civ_border_color="#eee"
+            app:civ_shadow_color="#ccc"
+            app:civ_shadow_radius="1"
+            android:src="@drawable/logo"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/img"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.balram.library.FotTextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:id="@+id/product"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#0e6958"
+                    app:customfont="Exo2-Regular.otf"
+                    android:textSize="14dp"/>
+
+
+                <com.balram.library.FotTextView
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/store"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="12dp"
+                    android:textColor="#5b5b5b"
+                    app:customfont="Exo2-Thin.otf"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+
+                    <com.balram.library.FotTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/qty"
+                        android:text="20"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="#6b1f08"
+                        app:customfont="Exo2-Bold.otf"
+                        android:gravity="left"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/order_qty"
+                        android:layout_marginTop="3dp"
+                        android:textSize="14dp"/>
+
+                    <com.balram.library.FotTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/price"
+                        android:text="12.40"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="#a97213"
+                        android:gravity="left"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/order_price"
+                        android:layout_marginTop="3dp"
+                        app:customfont="Exo2-Regular.otf"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+
+                    <com.balram.library.FotTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ordered_date"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="abc"
+                        android:textColor="#222"
+                        app:customfont="Exo2-Thin.otf"
+                        android:gravity="left"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/order_deltime"
+                        android:layout_marginTop="3dp"
+                        android:textSize="11dp"/>
+
+                    <com.balram.library.FotTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/status"
+                        android:singleLine="true"
+                        android:layout_marginLeft="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="#555"
+                        android:gravity="left"
+                        android:text="@string/pending"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/order_status"
+                        android:layout_marginTop="3dp"
+                        app:customfont="Exo2-Thin.otf"
+                        android:textSize="11dp"/>
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+            <com.balram.library.FotButton
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/send_reminder"
+                android:padding="4dp"
+                android:text="@string/remind"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:clickable="true"
+                android:background="@drawable/profile_button"
+                app:customfont="Exo2-Thin.otf"
+                android:textSize="12dp"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>

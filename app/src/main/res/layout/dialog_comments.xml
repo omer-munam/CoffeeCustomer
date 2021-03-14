@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#c000"
+    android:orientation="horizontal"
+    android:paddingStart="60dp"
+    android:paddingTop="200dp"
+    android:paddingEnd="60dp"
+    android:paddingBottom="200dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#eee"
+            android:gravity="center_vertical"
+            android:padding="4dp">
+
+            <com.balram.library.FotTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/review"
+                android:textColor="@color/green"
+                android:textSize="24dp"
+                app:customfont="Exo2-Bold.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#121"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/submitRating"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/profile_rounded_etx"
+                android:padding="5dp"
+                android:layout_marginBottom="5dp
+">
+
+                <com.balram.library.FotEditText
+                    android:id="@+id/reviewText"
+                    android:layout_width="249dp"
+                    android:layout_height="192dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/transparent"
+                    android:gravity="top"
+                    android:hint="@string/please_provide_us_with_your_valuable_feedback"
+                    android:inputType="textMultiLine|textImeMultiLine"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="12dp"
+                    app:customfont="Exo2-Regular.otf" />
+            </RelativeLayout>
+
+            <com.balram.library.FotButton
+                android:id="@+id/submitRating"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/profile_button"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:visibility="visible"
+                app:customfont="Exo2-Bold.otf" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

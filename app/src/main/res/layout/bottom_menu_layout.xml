@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="#eee"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/menu_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="@dimen/menu_height">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/menu1"
+            android:clickable="true"
+            android:onClick="selectMenu"
+            android:tag="0"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/menu_img"
+                android:layout_height="@dimen/menu_img"
+                android:id="@+id/menu_1"
+                android:clickable="false"
+                android:src="@drawable/menu_stores"
+                android:scaleType="centerInside"
+                android:tint="@color/menu_img"/>
+
+            <com.balram.library.FotTextView
+                android:background="#0000"
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/menu_products"
+                android:id="@+id/me_1"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/menu_mar"
+                android:textCursorDrawable="@null"
+                android:imeOptions="actionDone"
+                android:textColor="@color/menu_txt"
+                app:customfont="Exo2-Regular.otf"
+                android:textSize="@dimen/menu_txt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/menu2"
+            android:clickable="true"
+            android:onClick="selectMenu"
+            android:tag="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/menu_img"
+                android:layout_height="@dimen/menu_img"
+                android:id="@+id/menu_2"
+                android:clickable="false"
+                android:src="@drawable/menu_orders"
+                android:scaleType="centerInside"
+                android:tint="@color/menu_img"/>
+
+            <com.balram.library.FotTextView
+                android:background="#0000"
+                android:id="@+id/me_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/menu_orders"
+                android:clickable="false"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/menu_mar"
+                android:textCursorDrawable="@null"
+                android:imeOptions="actionDone"
+                android:textColor="@color/menu_txt"
+                app:customfont="Exo2-Regular.otf"
+                android:textSize="@dimen/menu_txt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/menu3"
+            android:clickable="true"
+            android:onClick="selectMenu"
+            android:tag="2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/menu_img"
+                android:layout_height="@dimen/menu_img"
+                android:id="@+id/menu_3"
+                android:clickable="false"
+                android:src="@drawable/menu_offer"
+                android:scaleType="centerInside"
+                android:tint="@color/menu_img"/>
+
+            <com.balram.library.FotTextView
+                android:background="#0000"
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/menu_offer"
+                android:id="@+id/me_3"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/menu_mar"
+                android:textCursorDrawable="@null"
+                android:imeOptions="actionDone"
+                android:textColor="@color/menu_txt"
+                app:customfont="Exo2-Regular.otf"
+                android:textSize="@dimen/menu_txt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:onClick="selectMenu"
+            android:orientation="vertical"
+            android:tag="3"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/menu_4"
+                android:layout_width="@dimen/menu_img"
+                android:layout_height="26dp"
+                android:clickable="false"
+                android:scaleType="centerInside"
+                android:scaleX="1.20"
+                android:scaleY="1.20"
+                android:src="@drawable/ic_star_empty"
+                android:tint="@color/menu_img" />
+
+            <com.balram.library.FotTextView
+                android:id="@+id/me_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/menu_mar"
+                android:background="#0000"
+                android:clickable="false"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:text="Reviews"
+                android:textColor="@color/menu_txt"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/menu_txt"
+                app:customfont="Exo2-Regular.otf" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

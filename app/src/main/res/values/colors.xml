@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6634</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF6634</color>
+
+    <color name="hint_txt">#aaa</color>
+    <color name="txt">#666</color>
+
+    <color name="menu_txt">#888</color>
+    <color name="menu_img">#888</color>
+
+    <color name="orange_sel">#eeec8352</color>
+    <color name="orange">#FF6634</color>
+    <color name="header">#FF6634</color>
+    <color name="header_dark">#b6623c</color>
+    <color name="txtwhite">#f7f7f7</color>
+
+    <color name="red">#ff5555</color>
+    <color name="green">#3e9e39</color>
+    <color name="next">#3e9e39</color>
+
+    <color name="profile_hint">#555</color>
+    <color name="profile_txt">#444</color>
+    <color name="profile_txt_edit">#333</color>
+    <color name="profile_hint_img">#555</color>
+    <color name="title_color">#fff</color>
+
+    <color name="edit_txt_black">#555</color>
+    <color name="edit_txt_black_hint">#aaa</color>
+
+
+    <color name="signin_textcolor_color">#983333</color>
+    <color name="signinButtonColor">#FF6634</color>
+    <color name="dark_grey_color">#75757D</color>
+</resources>

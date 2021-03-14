@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#0000"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="125dp">
+
+    <com.widget.RoundedImg
+        android:id="@+id/img"
+        app:round_corner_radius="5dp"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true" />
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#222"
+        app:customfont="Exo2-Bold.otf"
+        android:textSize="14dp"/>
+
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameloc"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/name"
+        android:textColor="@color/txt"
+        app:customfont="Exo2-Regular.otf"
+        android:textSize="14dp"/>
+
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distance"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_below="@+id/nameloc"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/txt"
+        app:customfont="Exo2-Thin.otf"
+        android:textSize="14dp"/>
+
+
+    <com.balram.library.FotTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mext"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_below="@+id/distance"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/next"
+        app:customfont="Exo2-Thin.otf"
+        android:textSize="12dp"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/rating"
+        android:layout_alignTop="@+id/nameloc"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="100dp"
+        android:orientation="horizontal"
+        android:layout_height="55dp">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:id="@+id/rating_s1"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/rating_blank"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:id="@+id/rating_s2"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/rating_blank"/>
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:id="@+id/rating_s3"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/rating_blank"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:id="@+id/rating_s4"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/rating_blank"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:id="@+id/rating_s5"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/rating_blank"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+<RelativeLayout
+    android:background="#fefefe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/topview"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/header"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:id="@+id/menu_opener"
+            android:onClick="toggleMenu"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/list_menu"/>
+
+        <com.balram.library.FotTextView
+            android:background="#0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="@string/view_cart"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/menu_mar"
+            android:textCursorDrawable="@null"
+            android:textColor="#fff"
+            app:customfont="Exo2-Regular.otf"
+            android:textSize="20dp"/>
+
+
+        <com.balram.library.FotTextView
+            android:background="@drawable/rounded_white"
+            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0.00"
+            android:singleLine="true"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@color/green"
+            app:customfont="Exo2-Bold.otf"
+            android:id="@+id/currentTotal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            android:textSize="13dp"/>
+
+    </RelativeLayout>
+
+
+
+    <ListView
+        android:layout_below="@+id/topview"
+        android:id="@+id/listview"
+        android:divider="#0000"
+        android:dividerHeight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:layout_above="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.balram.library.FotTextView
+        android:background="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/location"
+        android:textColor="#888"
+        app:customfont="Exo2-Regular.otf"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:text="dsfdsds"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/profile_txt"/>
+
+    <LinearLayout
+        android:id="@+id/menu_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0000"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="visible"
+        android:clickable="true"
+        android:onClick="gotoNext"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/menu_parent"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cart_bg"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:clickable="false"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/right_arrow"
+                android:tint="#fff"
+                android:clickable="false"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#c666"
+        android:visibility="gone"
+        android:id="@+id/rlLocation">
+
+        <ListView
+            android:id="@+id/lLocation"
+            android:divider="#0000"
+            android:padding="10dp"
+            android:scrollbars="none"
+            android:layout_margin="20dp"
+            android:background="@drawable/rounded_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/left_drawer"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:background="@drawable/rounded_right">
+
+        <include layout="@layout/menu_layout"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

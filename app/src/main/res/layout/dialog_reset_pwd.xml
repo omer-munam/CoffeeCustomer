@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:gravity="center"
+    android:background="#c666" >
+
+
+
+    <LinearLayout
+        android:background="@drawable/rounded_reset_pwd_bg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.balram.library.FotTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_widget"
+            android:gravity="center"
+            android:text="@string/enter_pwd"
+            android:padding="4dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/profile_etx_gap"
+            android:textColor="#333"
+            app:customfont="proximanova-light-webfont.ttf"
+            android:textSize="@dimen/profile_txt"/>
+
+
+        <com.balram.library.FotEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_widget"
+            android:gravity="left|center_vertical"
+            android:id="@+id/email_rst"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionDone"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="@dimen/profile_etx_gap"
+            android:layout_marginRight="40dp"
+            android:textColor="#333"
+            android:background="@drawable/reset_pwd_etx"
+            app:customfont="proximanova-light-webfont.ttf"
+            android:textSize="@dimen/profile_txt"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/profile_etx_gap"
+            android:background="#888"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:orientation="horizontal">
+
+            <com.balram.library.FotButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#0000"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:padding="4dp"
+                android:layout_weight="1"
+                android:textColor="#333"
+                android:textAllCaps="false"
+                android:id="@+id/cancel"
+                app:customfont="proximanova-bold-webfont.ttf"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#888"/>
+
+            <com.balram.library.FotButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#0000"
+                android:text="@string/done"
+                android:padding="4dp"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:textColor="#333"
+                android:id="@+id/done"
+                app:customfont="proximanova-regular-webfont.ttf"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

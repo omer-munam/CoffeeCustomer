@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcfcfc"
+    android:animateLayoutChanges="true">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/items"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/menu_parent"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loader_img"
+        android:layout_centerInParent="true"
+        android:layout_width="30dp"
+        android:src="@drawable/loader_image_"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true" />
+</RelativeLayout>

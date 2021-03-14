@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/cart_rl"
+        android:visibility="visible"
+        android:clickable="true"
+        android:onClick="viewCart"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/menu_parent"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cart_bg"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:clickable="false"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.balram.library.FotTextView
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="200"
+                android:id="@+id/amount_cart"
+                android:singleLine="true"
+                android:clickable="false"
+                android:textColor="#fff"
+                app:customfont="Exo2-Regular.otf"
+                android:shadowColor="#333"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/menu_txt"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/cart_img"
+                android:tint="#fff"
+                android:clickable="false"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+
+
+        </LinearLayout>
+</RelativeLayout>

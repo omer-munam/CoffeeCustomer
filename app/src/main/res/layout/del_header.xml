@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+    android:background="#0000"
+        android:clickable="true"
+        android:padding="5dp">
+
+    <com.balram.library.FotTextView
+        android:background="#0000"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/select_delivery_time"
+        android:singleLine="true"
+        android:clickable="false"
+        android:textColor="#333"
+        app:customfont="Exo2-Bold.otf"
+        android:textSize="15dp"/>
+</LinearLayout>
